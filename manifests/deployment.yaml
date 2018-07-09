@@ -2,14 +2,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: plantsbywebsphere8
+  name: helloworld
   labels:
-    app: plantsbywebsphere8
+    app: helloworld
 spec:
   ports:
     - port: 9080
   selector:
-    app: plantsbywebsphere8
+    app: helloworld
   type: NodePort
 
 ---
@@ -17,18 +17,18 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: plantsbywebsphere8
-  name: plantsbywebsphere8
+    app: helloworld
+  name: helloworld
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: plantsbywebsphere8
+        app: helloworld
     spec:
       containers:
-      - image: mycluster.icp:8500/default/plantsbywebsphere8:latest
-        name: plantsbywebsphere8
+      - image: mycluster.icp:8500/default/helloworld:latest
+        name: helloworld
         ports:
         - containerPort: 9080
           protocol: TCP
