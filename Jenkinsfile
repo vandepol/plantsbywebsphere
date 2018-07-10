@@ -2,7 +2,7 @@
 
 @Library('MicroserviceBuilder') _
 microserviceBuilderPipeline {
-    image = 'helloworld'
+    image = 'plantsbywebsphere8'
     mvnCommands = '--version'
     test=false
 }
