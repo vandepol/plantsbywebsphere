@@ -20,7 +20,7 @@ RUN /opt/ibm/wlp/bin/installUtility install  --acceptLicense \
 	jndi-1.0 \
 	cdi-1.2 \
 	jdbc-4.1 \
-	jpa-2.1 \
+	jpa-2.0 \
 	javaMail-1.5 \
 	el-3.0; exit 0
 
